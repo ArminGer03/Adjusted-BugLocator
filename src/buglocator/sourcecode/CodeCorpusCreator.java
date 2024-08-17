@@ -27,52 +27,7 @@ public class CodeCorpusCreator
 	 * ���� �Լ�.
 	 * @throws Exception
 	 */
-//	public void create() throws Exception
-//	{
-//		int count = 0;
-//		TreeSet<String> nameSet = new TreeSet<String>();
-//
-//		//File listing
-//		FileDetector detector = new FileDetector("java"); // java file Filter
-//		File[] files = detector.detect(codePath);
-//
-//		//preparing output File.
-//		FileWriter writeCorpus = new FileWriter(workDir + pathSeparator + "CodeCorpus.txt");
-//		FileWriter writer = new FileWriter(workDir + pathSeparator + "ClassName.txt");
-//
-//		//make corpus each file
-//		for (File file: files) {
-//			Corpus corpus = this.create(file);	//Corpus ����.
-//			if (corpus == null)	continue;
-//
-//			//file filtering  (�ߺ�����)
-//			String FullClassName = corpus.getJavaFileFullClassName();
-//			if (projectName.startsWith("ASPECTJ")){
-//				FullClassName = file.getPath().substring(codePath.length()); //��θ��� ���� �ν�.
-//				FullClassName = FullClassName.replace("\\", "/");
-//				if (FullClassName.startsWith("/"))
-//					FullClassName = FullClassName.substring(1); //��θ��� ���� �ν�.
-//
-//			}
-//			if (nameSet.contains(FullClassName)) continue;
-//
-//
-//			//Write File.
-//			if (!FullClassName.endsWith(".java"))	FullClassName +=  ".java";
-//			writer.write(count + "\t" + FullClassName + this.lineSeparator);
-//			writeCorpus.write(FullClassName + "\t" + corpus.getContent() + this.lineSeparator);
-//			writer.flush();
-//			writeCorpus.flush();
-//
-//			//Update Filter
-//			nameSet.add(FullClassName); //corpus.getJavaFileFullClassName());
-//			count++;
-//		}
-//		Property.getInstance().FileCount = count;
-//		writeCorpus.close();
-//		writer.close();
-//
-//	}
+
 	public void create() throws Exception {
 		int count = 0;
 		TreeSet<String> nameSet = new TreeSet<String>();

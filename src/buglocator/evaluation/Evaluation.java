@@ -108,15 +108,12 @@ public class Evaluation {
 		int ErrorCount = 0;
 		
 		//Evaluation Part-------------------------------------------------
-		// ���׸���Ʈ���� �����Ǿ��� ���ϸ���� �ҷ���. (���� ���� ��)
 		TreeSet<String> fileSet = fixTable.get(_bugID);
 		Iterator<String> fileIt = fileSet.iterator();
 		Hashtable<Integer, String> answerIdTable = new Hashtable<Integer, String>();
 		while (fileIt.hasNext()) {
 			String fileName = fileIt.next();
-//			fileName = "org.eclipse.e4.ui.internal.workbench.PartServiceImpl.java";
 			Integer fileId = idTable.get(fileName);
-			//���׸���Ʈ���� ������ ������ ���� �ڵ忡���� ���ٸ� ������ �߻�. (������ ���� �ʴ� ��� ���� ����)
 			if (fileId==null){
 				errorWriter.write(_bugID + ": This version of source code has no "+ fileName +".... Please check it!\n" );
 				errorWriter.flush();
@@ -125,8 +122,7 @@ public class Evaluation {
 			}					
 			answerIdTable.put(fileId, fileName);
 		}
-		
-		//����¿� �ִ� ���ϵ��� ���°�� ��ũ�Ǿ����� ����� ������. (writer�� ��õ�� ��� ��ü�� ������)
+
 		FileWriter writer = new FileWriter(recommandedPath + _bugID + ".txt");
 		for (int i = 0; i < sortedRank.length; i++) {
 			Rank rank = sortedRank[i];
@@ -200,44 +196,28 @@ public class Evaluation {
 		return table;
 	}
 
-//	public Hashtable<Integer, TreeSet<String>> getFixLinkTable() throws IOException {
-//		BufferedReader reader = new BufferedReader(new FileReader(this.workDir + "FixLink.txt"));
-//		String line = null;
-//		Hashtable<Integer, TreeSet<String>> table = new Hashtable<Integer, TreeSet<String>>();
-//		while ((line = reader.readLine()) != null) {
-//			String[] valueStrings = line.split("\t");
-//			Integer id = Integer.parseInt(valueStrings[0]);
-//			String fileName = valueStrings[1].trim();
-//			if (!table.containsKey(id)) {
-//				table.put(id, new TreeSet<String>());
-//			}
-//			table.get(id).add(fileName);
-//		}
-//		reader.close();
-//		return table;
-//	}
-public Hashtable<Integer, TreeSet<String>> getFixLinkTable() throws IOException {
-	BufferedReader reader = new BufferedReader(new FileReader(this.workDir + "FixLink.txt"));
-	String line = null;
-	Hashtable<Integer, TreeSet<String>> table = new Hashtable<Integer, TreeSet<String>>();
+	public Hashtable<Integer, TreeSet<String>> getFixLinkTable() throws IOException {
+		BufferedReader reader = new BufferedReader(new FileReader(this.workDir + "FixLink.txt"));
+		String line = null;
+		Hashtable<Integer, TreeSet<String>> table = new Hashtable<Integer, TreeSet<String>>();
 
-	while ((line = reader.readLine()) != null) {
-		String[] valueStrings = line.split("\t");
-		Integer id = Integer.parseInt(valueStrings[0]);
-		String fileName = valueStrings[1].trim().replace("\\", "/"); // Normalize path separators
+		while ((line = reader.readLine()) != null) {
+			String[] valueStrings = line.split("\t");
+			Integer id = Integer.parseInt(valueStrings[0]);
+			String fileName = valueStrings[1].trim().replace("\\", "/"); // Normalize path separators
 
-		// Normalize the file path
-		fileName = fileName.replace("\\", "/").trim();
-		fileName = "/" + fileName;
+			// Normalize the file path
+			fileName = fileName.replace("\\", "/").trim();
+			fileName = "/" + fileName;
 
-		if (!table.containsKey(id)) {
-			table.put(id, new TreeSet<String>());
+			if (!table.containsKey(id)) {
+				table.put(id, new TreeSet<String>());
+			}
+			table.get(id).add(fileName);
 		}
-		table.get(id).add(fileName);
+		reader.close();
+		return table;
 	}
-	reader.close();
-	return table;
-}
 
 	private Rank[] getSortedRank(float[] finalR) {
 		Rank[] R = new Rank[finalR.length];

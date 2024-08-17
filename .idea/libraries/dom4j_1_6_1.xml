@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="dom4j-1.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/libs/args4j-2.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/contenttype-3.2.0-v20060603.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/lucene-core-2.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/mysql-connector-java-5.1.13-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.core.jobs_3.4.1.R34x_v20081128.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.core.resources_3.4.2.R34x_v20090126.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.core.runtime_3.4.0.v20080512.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.jdt.core_3.4.4.v_894_R34x.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.jface_3.4.1.M20080827-2000.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.osgi_3.4.2.R34x_v20080826-1230.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.text_3.4.0.v20080605-1800.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/preferences-3.2.100-v20070522.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/wvtool.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/dom4j-1.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
