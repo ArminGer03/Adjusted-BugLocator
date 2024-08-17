@@ -16,6 +16,7 @@
       <root url="jar://$PROJECT_DIR$/src/libs/preferences-3.2.100-v20070522.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/libs/wvtool.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/libs/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/org.eclipse.jgit-6.8.0.202311291450-r.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

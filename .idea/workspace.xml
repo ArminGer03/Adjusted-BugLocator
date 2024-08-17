@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9deb85c1-6c0c-49c3-9a2d-0319a5c3cd2a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/buglocator/sourcecode/CodeCorpusCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buglocator/sourcecode/CodeCorpusCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_6_8_0_202311291450_r.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/wvtool.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/buglocator/utils/CommitCheckout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/org.eclipse.jgit-5.11.0.202103091610-r.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/dom4j_1_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/dom4j_1_6_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdjustedBugLocator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AdjustedBugLocator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BUGS/dataset/A_platform_one.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/BUGS/dataset/A_platform_one.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buglocator/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buglocator/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buglocator/bug/BugCorpusCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buglocator/bug/BugCorpusCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/buglocator/property/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/buglocator/property/Property.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +56,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/libs" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="BugLocator" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="buglocator.BugLocator" />
@@ -112,16 +135,6 @@
           <url>file://$PROJECT_DIR$/src/buglocator/bug/SimilarityDistribution.java</url>
           <line>57</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/buglocator/evaluation/Evaluation.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/buglocator/evaluation/Evaluation.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

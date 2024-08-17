@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wvtool">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/libs/wvtool.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

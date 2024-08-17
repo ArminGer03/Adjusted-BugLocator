@@ -21,7 +21,8 @@ public class Property {
 		this.WorkDir = workDir;
 		this.Alpha = alpha;
 		this.OutputFile = outputFile;
-		
+
+		this.CommitHash = null;
 		this.Separator = System.getProperty("file.separator");
 		this.LineSeparator = System.getProperty("line.separator");
 	}
@@ -36,6 +37,8 @@ public class Property {
 	public final String WorkDir;
 	public final float Alpha;
 	public final String OutputFile;
+
+	public String CommitHash;
 	
 	public int FileCount;
 	public int WordCount;

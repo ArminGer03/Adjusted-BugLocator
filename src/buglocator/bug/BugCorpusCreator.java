@@ -306,6 +306,9 @@ public class BugCorpusCreator {
 						case "files":
 							files = columnElement.getTextContent();
 							break;
+						case "commit":
+							Property.getInstance().CommitHash = columnElement.getTextContent();
+							break;
 					}
 				}
 

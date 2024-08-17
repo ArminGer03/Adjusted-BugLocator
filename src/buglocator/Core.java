@@ -10,6 +10,7 @@ import buglocator.sourcecode.CodeVectorCreator;
 import buglocator.sourcecode.Indexer;
 import buglocator.sourcecode.LenScore;
 import buglocator.sourcecode.Similarity;
+import buglocator.utils.CommitCheckout;
 
 
 public class Core
@@ -35,6 +36,7 @@ public class Core
 			localException2.printStackTrace();
 			return;
 		}
+
 		try
 		{
 			System.out.println("compute bug similarity...");
@@ -44,6 +46,17 @@ public class Core
 			localException3.printStackTrace();
 			return;
 		}
+
+		try
+		{
+			System.out.println("checkout to one commit before fix...");
+			new CommitCheckout().create();
+		}
+		catch (Exception z) {
+			z.printStackTrace();
+			return;
+		}
+
 		try
 		{
 			System.out.println("create code corpus...");
@@ -70,18 +83,21 @@ public class Core
 			new Indexer().index();
 		}
 		catch (Exception localException5) {}
+
 		try
 		{
 			System.out.println("create vector...");
 			new CodeVectorCreator().create();
 		}
 		catch (Exception localException6) {}
+
 		try
 		{
 			System.out.println("compute VSMScore...");
 			new Similarity().compute();
 		}
 		catch (Exception localException7) {}
+
 		try
 		{
 			System.out.println("compute LengthScore...");
@@ -96,6 +112,7 @@ public class Core
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+
 		System.out.println("finished");
 	}
 }
